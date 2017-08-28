@@ -1,0 +1,6 @@
+Memo:
+database login: user: root , pass: admin
+the database name: vehiclemandb
+schema for: 
+- table user_table: 
+	id, first_name, last_name, email
