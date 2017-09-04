@@ -1,42 +1,35 @@
 package com.vehiclemanager.entity;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User implements Serializable {
+public class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue
-	private Long id;
+	long id;
 
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String phone;
-	private String companyName;
-	private List<Vehicle> vehicles;
+	String firstName;
+	String lastName;
+	String companyName;
+	String email;
+	String phone;
+	Vehicle assignedVehicle;
 
-	public User() {
+	public Person() {
 
 	}
 
-	public User(String firstName, String lastName, String email) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-	}
-
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -56,6 +49,14 @@ public class User implements Serializable {
 		this.lastName = lastName;
 	}
 
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -72,11 +73,11 @@ public class User implements Serializable {
 		this.phone = phone;
 	}
 
-	public String getCompanyName() {
-		return companyName;
+	public Vehicle getAssignedVehicle() {
+		return assignedVehicle;
 	}
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
+	public void setAssignedVehicle(Vehicle assignedVehicle) {
+		this.assignedVehicle = assignedVehicle;
 	}
 }
