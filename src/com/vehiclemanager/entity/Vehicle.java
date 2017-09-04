@@ -1,7 +1,9 @@
 package com.vehiclemanager.entity;
 
+import java.awt.image.BufferedImage;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,7 +33,7 @@ public class Vehicle implements Serializable {
 	int width;
 	int length;
 	int weight;
-	//	List<Picture> pictures;
+	List<BufferedImage> pictures;
 
 	public Vehicle() {
 
@@ -173,11 +175,11 @@ public class Vehicle implements Serializable {
 		this.vehicleType = vehicleType;
 	}
 
-	//	public List<Picture> getPictures() {
-	//		return pictures;
-	//	}
-	//
-	//	public void setPictures(List<Picture> pictures) {
-	//		this.pictures = pictures;
-	//	}
+	public List<BufferedImage> getPictures() {
+		return pictures;
+	}
+
+	public void setPictures(List<BufferedImage> pictures) {
+		this.pictures = pictures;
+	}
 }
