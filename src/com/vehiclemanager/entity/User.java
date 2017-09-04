@@ -1,8 +1,19 @@
 package com.vehiclemanager.entity;
 
-public class User {
+import java.io.Serializable;
 
-	private String id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue
+	private Long id;
+
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -17,11 +28,11 @@ public class User {
 		this.email = email;
 	}
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
